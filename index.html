@@ -14,53 +14,62 @@
 </head>
 
 <body>
-
-    <h1>SPLITTER</h1>
-
-    <form action="">
-
-        <fieldset>
-            <legend>Bill</legend>
-            <input type="text" id="bill">
-        </fieldset>
-
-        <fieldset id="tip">
-            <legend>Select Tip %</legend>
-
-            <input type="radio" id="5" name="tip" value="5">
-            <label for="5">5%</label>
-
-            <input type="radio" id="10" name="tip" value="10" checked>
-            <label for="10">10%</label>
-
-            <input type="radio" id="15" name="tip" value="15">
-            <label for="15">15%</label>
-
-            <input type="radio" id="25" name="tip" value="25">
-            <label for="25">25%</label>
-
-            <input type="radio" id="50" name="tip" value="50">
-            <label for="50">50%</label>
-
-            <input type="text" id="custom" name="tip" value="" placeholder="Custom">
-            <!-- enablinti textarea paspaudus -->
-
-        </fieldset>
-
-        <fieldset>
-            <legend>Number of People</legend>
-            <input type="text" name="" id="">
-        </fieldset>
-
-    </form>
-
-    <div>
-        <div>Tip Amount / person</div>
-        <div>Total / person Reset</div>
-        <button>RESET</button>
+    <div class="wrapper">
+    <div class="header">
+        <img src="./images/logo.svg" alt="logo" />
     </div>
 
+    <div class="mainContainer">
 
+        <div class="topSection">
+
+            <div class="bill">
+                <div class="label">
+                    <label for="billInput">Bill</label>
+                </div>
+                <input type="number" placeholder="142.55" id="bill" min="0">
+            </div>
+
+            <div class="tip">
+                <div class="label">
+                    <label for="customTip">Select Tip %</label>
+                </div>
+                <div class="btnContainer">
+                    <button class="btn">5%</button>
+                    <button class="btn">10%</button>
+                    <button class="btn active">15%</button>
+                    <button class="btn">25%</button>
+                    <button class="btn">50%</button>
+                    <input type="number" placeholder="Custom" id="customTip" min="0" class="btn" />
+                </div>
+            </div>
+
+            <div class="people">
+                <div class="label">
+                    <label for="people">Number of People<p id="error"></p></label>
+                </div>
+                <input type="number" placeholder="5" id="people" min="0">
+            </div>
+        </div>
+
+        <div class="bottomSection">
+            <div class="amount">
+                <div class="desc">
+                    <p>Tip Amount <br/> <span>/ person</span></p>
+                    <div class="tipValue">$4.27</div>
+                </div>
+                <div class="desc">
+                    <p>Total <br/> <span>/ person</span></p>
+                    <div class="tipValue">$32.79</div>
+                </div>
+            </div>
+            <div class="reset-div">
+                <button class="reset">RESET</button>
+            </div>
+        </div>
+    </div>
+
+</div>
 </body>
 
 </html>
