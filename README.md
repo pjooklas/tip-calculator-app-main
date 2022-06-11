@@ -26,13 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![x](./images/tip-calculator-screenshot.jpg)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://pjooklas.github.io/tip-calculator-app-main/)
 
 ## My process
 
@@ -46,7 +45,8 @@ Users should be able to:
 
 ### What I learned
 
-
+- JavaScript
+- DOM manipulation
 
 ## Author
 
