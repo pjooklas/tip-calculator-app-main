@@ -5,10 +5,212 @@ $grayishCyan: hsl(184, 14%, 56%);
 $lightGrayishCyan: hsl(185, 41%, 84%);
 $veryLightGrayishCyan: hsl(189, 41%, 97%);
 $white: hsl(0, 0%, 100%);
-body {
-    background-color: $grayishCyan;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@mixin fontMixin {
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
 }
 
-fieldset {
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: $lightGrayishCyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Mono', monospace;
+}
+
+::placeholder {
+    color: $grayishCyan;
+}
+
+:-ms-input-placeholder {
+    color: $grayishCyan;
+}
+
+ ::-ms-input-placeholder {
+    color: $grayishCyan;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.mainContainer {
+    height: 788px;
+    width: 374px;
+    padding: 32px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+}
+
+.label {
+    color: $darkGrayishCyan;
+    margin-bottom: 6px;
+}
+
+.topSection {
+    display: flex;
+    flex-direction: column;
+    #bill {
+        margin-bottom: 33px;
+        background-image: url(./images/icon-dollar.svg);
+        background-repeat: no-repeat;
+        background-size: 0.5em;
+        background-position: 19px;
+        height: 2em;
+        width: 100%;
+        border-style: none;
+        border-radius: 0.3rem;
+        background-color: $veryLightGrayishCyan;
+        color: $veryDarkCyan;
+        text-align: end;
+        @include fontMixin();
+    }
+}
+
+.btnContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    gap: 4%;
+    .btn {
+        flex-shrink: 1;
+        flex-grow: 1;
+        flex-basis: 48%;
+        margin-bottom: 0.5em;
+        height: 48px;
+        background-color: $veryDarkCyan;
+        border: none;
+        color: $white;
+        border-radius: 5px;
+        @include fontMixin();
+    }
+    .active {
+        background-color: $strongCyan;
+        color: $veryDarkCyan;
+    }
+    #customTip {
+        padding: 0;
+        width: 100%;
+        background-color: $veryLightGrayishCyan;
+        color: $veryDarkCyan;
+        text-align: end;
+        @include fontMixin();
+    }
+}
+
+.people {
+    color: $darkGrayishCyan;
+    padding-bottom: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#error {
+    color: red;
+}
+
+#people {
+    margin-bottom: 31px;
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-size: 11px;
+    background-position: 19px;
+    height: 48px;
+    width: 100%;
+    border-style: none;
+    border-radius: 0.3rem;
+    background-color: $veryLightGrayishCyan;
+    color: $veryDarkCyan;
+    text-align: end;
+    @include fontMixin();
+}
+
+.bottomSection {
+    background-color: $veryDarkCyan;
+    height: 500px;
+    width: 327px;
+    border-radius: 14px;
+    padding: 21px;
+}
+
+.amount {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 18px 0px 30px 3px;
+}
+
+.desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    p {
+        color: $white;
+    }
+    span {
+        color: $grayishCyan;
+        font-size: 13px;
+    }
+    .tipValue {
+        color: $strongCyan;
+        font-size: 33px;
+    }
+}
+
+.reset {
+    margin-left: 3px;
+    height: 48px;
+    width: 281px;
+    @include fontMixin();
     border: none;
+    border-radius: 6px;
+    background-color: $strongCyan;
+    color: $veryDarkCyan;
+}
+
+@media (min-width: 1440px) {
+    .mainContainer {
+        height: 480px;
+        width: 920px;
+        padding: 32px;
+        flex-direction: row;
+        align-items: center;
+    }
+    .topSection {
+        width: 50%;
+        padding: 1.5em;
+        .btnContainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    .bottomSection {
+        width: 50%;
+        padding: 1.5em;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .reset-div {
+            display: flex;
+            justify-content: center;
+        }
+    }
 }

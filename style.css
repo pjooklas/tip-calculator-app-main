@@ -1,8 +1,304 @@
-body {
-  background-color: #7f9c9f;
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
 }
 
-fieldset {
+body {
+  height: 100vh;
+  background-color: #c5e4e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Space Mono', monospace;
+}
+
+::-webkit-input-placeholder {
+  color: #7f9c9f;
+}
+
+:-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+::-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+::placeholder {
+  color: #7f9c9f;
+}
+
+:-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+::-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.mainContainer {
+  height: 788px;
+  width: 374px;
+  padding: 32px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 24px;
+}
+
+.label {
+  color: #5e7a7d;
+  margin-bottom: 6px;
+}
+
+.topSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.topSection #bill {
+  margin-bottom: 33px;
+  background-image: url(./images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-size: 0.5em;
+  background-position: 19px;
+  height: 2em;
+  width: 100%;
+  border-style: none;
+  border-radius: 0.3rem;
+  background-color: #f4fafa;
+  color: #00494d;
+  text-align: end;
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+}
+
+.btnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 32px;
+  gap: 4%;
+}
+
+.btnContainer .btn {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+  margin-bottom: 0.5em;
+  height: 48px;
+  background-color: #00494d;
   border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+}
+
+.btnContainer .active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.btnContainer #customTip {
+  padding: 0;
+  width: 100%;
+  background-color: #f4fafa;
+  color: #00494d;
+  text-align: end;
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+}
+
+.people {
+  color: #5e7a7d;
+  padding-bottom: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#error {
+  color: red;
+}
+
+#people {
+  margin-bottom: 31px;
+  background-image: url(./images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-size: 11px;
+  background-position: 19px;
+  height: 48px;
+  width: 100%;
+  border-style: none;
+  border-radius: 0.3rem;
+  background-color: #f4fafa;
+  color: #00494d;
+  text-align: end;
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+}
+
+.bottomSection {
+  background-color: #00494d;
+  height: 500px;
+  width: 327px;
+  border-radius: 14px;
+  padding: 21px;
+}
+
+.amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 18px;
+  margin: 18px 0px 30px 3px;
+}
+
+.desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.desc p {
+  color: white;
+}
+
+.desc span {
+  color: #7f9c9f;
+  font-size: 13px;
+}
+
+.desc .tipValue {
+  color: #26c0ab;
+  font-size: 33px;
+}
+
+.reset {
+  margin-left: 3px;
+  height: 48px;
+  width: 281px;
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+  border: none;
+  border-radius: 6px;
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+@media (min-width: 1440px) {
+  .mainContainer {
+    height: 480px;
+    width: 920px;
+    padding: 32px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .topSection {
+    width: 50%;
+    padding: 1.5em;
+  }
+  .topSection .btnContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .bottomSection {
+    width: 50%;
+    padding: 1.5em;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .bottomSection .reset-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
